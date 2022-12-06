@@ -11,8 +11,7 @@ const getMarker = (data: string[], len: number) => {
         const start = i;
         const end = i + len;
 
-        const set = new Set();
-        data.slice(start, end).map(d => set.add(d));
+        const set = new Set(data.slice(start, end));
 
         if (set.size === len) {
             marker = end;
