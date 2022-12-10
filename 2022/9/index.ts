@@ -22,7 +22,7 @@ const moveRope = (len: number) => {
 
         for (let s = 0; s < parseInt(steps, 10); s++) {
             knots[0].x += d.x;
-			knots[0].y += d.y;
+            knots[0].y += d.y;
 
             for (let i = 1; i < knots.length; i++) {
                 const h = knots[i - 1];
