@@ -35,7 +35,7 @@ const solvePart2 = (input: string[][]) => {
     let cycles = 1;
     let output = '';
 
-    const calcStrengthAndIncCycles = () => {
+    const calcCRTandInc = () => {
         if ((cycles) % 40 === 0 && cycles <= 220) {
             output += '\n';
         }
@@ -47,13 +47,13 @@ const solvePart2 = (input: string[][]) => {
     };
 
     for (const [instr, value] of input) {
-        calcStrengthAndIncCycles();
+        calcCRTandInc();
 
         if (instr === 'noop') continue;
     
         X += parseInt(value, 10);
     
-        calcStrengthAndIncCycles();
+        calcCRTandInc();
     }
     
     return output;
